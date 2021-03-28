@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="201mm"
+   height="201mm"
+   viewBox="0 0 201 201"
+   version="1.1"
+   id="svg847"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="CSS grid.svg">
+  <defs
+     id="defs841">
+    <rect
+       x="25.432366"
+       y="48.233798"
+       width="53.495667"
+       height="18.416541"
+       id="rect2066" />
+    <rect
+       x="39.662798"
+       y="172.86993"
+       width="56.240773"
+       height="29.359271"
+       id="rect2049" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.22627417"
+     inkscape:cx="188.0184"
+     inkscape:cy="595.17058"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:snap-grids="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:object-nodes="true"
+     inkscape:snap-intersection-paths="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1532" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata844">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="opacity:0.999">
+    <path
+       style="fill:#90b3ed;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="M 0.26458333,200.95104 200.37196,0.37417734 0.29232603,-0.58465209 Z"
+       id="path2062" />
+    <path
+       id="path1536"
+       style="fill:#b094ff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -337.50796,53.13473 v 200.99962 l 48.65595,-48.65543 -3.07165,-34.42322 h 25.21397 l 1.01182,11.26856 23.83575,-23.83524 h -22.72574 l -0.57154,-5.71179 -1.14205,-12.64781 -0.57154,-6.7722 h 29.86587 20.2768 l 14.19552,-14.19551 1.02319,-11.50886 h -35.41437 -0.0811 -60.54669 l -0.48937,-5.63015 -1.14308,-12.728937 -0.65268,-6.691582 h 62.83182 0.0811 62.74914 l -0.57051,6.691582 -0.20205,2.282548 38.44209,-38.441581 z" />
+    <path
+       style="fill:none;stroke:#5080d1;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 7.5109451,201.02237 7.2760415,7.277075 201.00065,7.5416583"
+       id="path843"
+       sodipodi:nodetypes="ccc" />
+    <rect
+       style="fill:#624eff;fill-opacity:1;stroke:none;stroke-width:21.9953;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2055"
+       width="158.6512"
+       height="64.358505"
+       x="389.50522"
+       y="62.954247"
+       ry="15.715436" />
+    <path
+       style="fill:#5080d1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="M 0.26458333,200.95104 200.37196,0.37417734 200.74614,200.93323 Z"
+       id="path2060" />
+    <text
+       xml:space="preserve"
+       id="text2047"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat Semi-Bold';white-space:pre;shape-inside:url(#rect2049);fill:#ebebeb;fill-opacity:1;stroke:#ebebeb;stroke-width:0.658447;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;"
+       transform="matrix(2.9257227,0,0,3.1534457,-94.498127,-487.7334)"><tspan
+         x="39.662109"
+         y="196.21412"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:25.4px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Semi-Bold';fill:#ebebeb;fill-opacity:1;stroke:#ebebeb;stroke-width:0.658447;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">Grid</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text2064"
+       style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:10.58333333px;white-space:pre;shape-inside:url(#rect2066);" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:600;font-size:35.0749px;line-height:1.25;font-family:Montserrat;letter-spacing:1.65237px;fill:#ebebeb;fill-opacity:1;stroke:#ebebeb;stroke-width:1.83897;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;-inkscape-font-specification:'Montserrat Semi-Bold';font-stretch:normal;font-variant:normal;"
+       x="106.39054"
+       y="179.28017"
+       id="text2072"
+       transform="scale(0.98859858,1.0115329)"><tspan
+         sodipodi:role="line"
+         id="tspan2070"
+         x="106.39054"
+         y="179.28017"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:'Montserrat Semi-Bold';fill:#ebebeb;fill-opacity:1;stroke:#ebebeb;stroke-width:1.83897;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;">CSS</tspan></text>
+  </g>
+</svg>
