@@ -100,7 +100,7 @@ function filtrar() {
     for (cardTitle of cardsTitles){
         let cardTitleLower = cardTitle.innerHTML.toLowerCase();
         if(cardTitleLower.indexOf(searching) !== -1){
-            let currentTypeCardImage = cardTitle.parentNode.children[0].dataset.type;
+            let currentTypeCardImage = cardTitle.parentNode.children[0].dataset.type.toLowerCase();
             if (currentTypeNavlist !== "all") {
                 if (currentTypeNavlist === currentTypeCardImage) {
                     cardTitle.parentNode.style.display = "flex";
@@ -179,7 +179,7 @@ navListLi.forEach(element => {
 
 
 
-// Al clickear aparezca hacer que aparezca el tipo de imágenes
+// Al clickear hacer que aparezca el tipo de imágenes
 function displayNoneAllCards2() {
     cards.forEach(element => { // Al escribir en el input darle um display none a todos los elementos
         element.style.display = "none"; 
