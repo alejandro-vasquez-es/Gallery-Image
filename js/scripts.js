@@ -90,37 +90,38 @@ function closeReultsAlert(){
 // filtrar la busqueda
 function filtrar() {
     const searching = searchInput.value.toLowerCase();
-    let aElementList = document.querySelectorAll('li');
+    let aElementList = document.querySelectorAll('.nav_element');
+    let currentTypeNavlist;
     aElementList.forEach(element => {
-        if (element.className === "focus") {
+        if (element.className === "nav_element focus") {
             currentTypeNavlist = element.children[0].innerHTML.toLowerCase();
-        }
-    });
-    let count = 0;
-    for (cardTitle of cardsTitles){
-        let cardTitleLower = cardTitle.innerHTML.toLowerCase();
-        if(cardTitleLower.indexOf(searching) !== -1){
-            let currentTypeCardImage = cardTitle.parentNode.children[0].dataset.type.toLowerCase();
-            if (currentTypeNavlist !== "all") {
-                if (currentTypeNavlist === currentTypeCardImage) {
-                    cardTitle.parentNode.style.display = "flex";
-                    count = count + 1;
+            let count = 0;
+            for (cardTitle of cardsTitles){
+                let cardTitleLower = cardTitle.innerHTML.toLowerCase();
+                if(cardTitleLower.indexOf(searching) !== -1){
+                    let currentTypeCardImage = cardTitle.parentNode.children[0].dataset.type.toLowerCase();
+                    if (currentTypeNavlist !== "all") {
+                        if (currentTypeNavlist === currentTypeCardImage) {
+                            cardTitle.parentNode.style.display = "flex";
+                            count = count + 1;
+                        }
+                    }else{
+                        cardTitle.parentNode.style.display = "flex";
+                        count = count + 1;
+                    }
                 }
-            }else{
-                cardTitle.parentNode.style.display = "flex";
-                count = count + 1;
+                if(count === 0){
+                    const NoResults = document.querySelector('.noResults');
+                    const closeResults = document.querySelector('.noResults__close');
+                    NoResults.style.display = "block";
+                    // Cerrar el alert
+                    closeResults.addEventListener('click', closeReultsAlert);
+                }else{
+                    document.querySelector('.noResults').style.display = "none";
+                }
             }
         }
-        if(count === 0){
-            const NoResults = document.querySelector('.noResults');
-            const closeResults = document.querySelector('.noResults__close');
-            NoResults.style.display = "block";
-            // Cerrar el alert
-            closeResults.addEventListener('click', closeReultsAlert);
-        }else{
-            document.querySelector('.noResults').style.display = "none";
-        }
-    }
+    });
 }
 searchInput.addEventListener('input', filtrar)
 
@@ -156,15 +157,11 @@ function smoothScroll(target, duration) {
 arrow.addEventListener('click', function(){
     smoothScroll('nav', 1000)
 })
-// function scrollToNavList(//     scrollTo(window.scroll(0, nav.offsetTop))
-// }
-// arrow.addEventListener('click', scrollToNavList)
-
 // Al clickear un elemento li se debe agregar la clase
-const navListLi = document.querySelectorAll('li');
+const navListLi = document.querySelectorAll('.nav_element');
 function addAndDeleteStyle() {
     for (let li of navListLi) {
-        if (li.className === 'focus'){
+        if (li.className === 'nav_element focus'){
             if(li !== this){
                 li.classList.remove('focus')
             }
@@ -204,3 +201,24 @@ navListLi.forEach(element => {
 });
 
 
+// appear and desappear GoUP button
+
+const goUpButton = document.querySelector('.goUp');
+const banner = document.querySelector('.banner');
+let vh100 = banner.clientHeight;
+function goUpButtonAppear(){
+    vh100 = banner.clientHeight;
+    if (window.pageYOffset > vh100 + cards[0].clientHeight){
+        goUpButton.classList.add('goUp__popUp');
+        goUpButton.classList.remove('goUp__popOff');
+    }else{
+        goUpButton.classList.remove('goUp__popUp');
+        goUpButton.classList.add('goUp__popOff');
+    }
+}
+window.addEventListener('scroll', goUpButtonAppear);
+window.addEventListener('load', goUpButtonAppear);
+
+goUpButton.addEventListener('click', function(){
+    smoothScroll('nav', 1000)
+})
