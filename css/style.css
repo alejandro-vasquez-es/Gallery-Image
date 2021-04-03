@@ -109,7 +109,7 @@ body{
     background-color: #dcdcdc;
     padding: 1rem 3rem 1rem 1rem;
     border-radius: 0.5rem;
-    background-image: url(search.svg);
+    background-image: url("search.svg");
     background-repeat: no-repeat;
     background-position: right 0.6rem center;
     background-size: 2rem;
@@ -184,7 +184,7 @@ body{
         background-color: #dddddd;
         padding: 1rem 3rem 1rem 1rem;
         border-radius: 0;
-        background-image: url(/assets/img/search.svg);
+        background-image: url("search.svg");
         background-repeat: no-repeat;
         background-position: right 0.6rem center;
         background-size: 2rem;
