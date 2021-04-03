@@ -619,15 +619,16 @@ footer{
     position: fixed;
     bottom: 0;
     right: 0;
-    margin: 0 1rem 1rem 0;
+    margin: 0 1.5rem 1.5rem 0;
     background: #4568DC;
     background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
     background: linear-gradient(to right, #B06AB3, #4568DC);
     border-radius: 50%;
     cursor: pointer;
-    height: 2.8rem;
-    width: 2.8rem;
+    height: 3.4rem;
+    width: 3.4rem;
     transform: scale(0);
+    opacity: 0;
 }
 .goUp__popUp{
     animation: popUp 0.5s forwards;
@@ -655,7 +656,7 @@ footer{
     }
 }
 .goUp__arrow{
-    font-size: 2.3rem;
+    font-size: 2.8rem;
     color: #eee;
     position: relative;
     left: 50%;

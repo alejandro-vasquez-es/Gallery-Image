@@ -211,6 +211,7 @@ function goUpButtonAppear(){
     if (window.pageYOffset > vh100 + cards[0].clientHeight){
         goUpButton.classList.add('goUp__popUp');
         goUpButton.classList.remove('goUp__popOff');
+        goUpButton.style.opacity = "1";
     }else{
         goUpButton.classList.remove('goUp__popUp');
         goUpButton.classList.add('goUp__popOff');
