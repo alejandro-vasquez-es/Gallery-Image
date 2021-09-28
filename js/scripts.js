@@ -1,11 +1,14 @@
 // Al hacer hover en la imagen ponerle display block al quick view
 const quickView = document.querySelectorAll('.card__quick-view');
+
 function leaveBrightnees() {
     this.style.filter = "brightness(1)"
 }
+
 function addBrightness() {
     this.style.filter = "brightness(0.7)"
 }
+
 function keepBrightness() {
     this.parentNode.children[0].style.filter = "brightness(0.7)";
     this.parentNode.children[0].addEventListener('mouseleave', leaveBrightnees);
@@ -19,13 +22,35 @@ quickView.forEach(element => {
 
 // Agregarle la clase open cuando se clickee la imagen o el quick view
 const images = document.querySelectorAll('.card__image');
+
 function openModal() {
     document.body.style.overflow = "hidden"
-    this.parentNode.children[0].style.transition = "filter 1s";
-    this.parentNode.children[0].style.filter = "brightness(1)";
+    const modal = document.createElement('div');
+    modal.innerHTML = `
+        <img src="${this.parentNode.children[0].src}" style="transition: filter 1s: filter; brightness(1)">
+        <h3 class="card__title">${this.parentNode.children[2].textContent}</h3>
+        <i class="fas fa-times card__close succes"></i>
+    `;
+    modal.className = "card__image--open";
+    this.parentNode.parentNode.appendChild(modal);
+    // const modal_container = document.createElement('div');
+    // modal_container.className = 'card card__image--open';
+    // const modal_image = document.createElement('img');
+    // modal_image.classList.add('card__image');
+    // modal_image.src = this.parentNode.children[0].src;
+    // modal_image.style.transition = 'filter 1s';
+    // modal_image.style.filter = 'brightness(1)';
+    // const modal_title = document.createElement('h3');
+    // modal_title.textContent = this.parentNode.children[2];
+    // const modal_close = document.createElement('i');
+    // modal_close.
+
+    //TODO creando nuevo modal
+    // this.parentNode.children[0].style.transition = "filter 1s";
+    // this.parentNode.children[0].style.filter = "brightness(1)";
     this.parentNode.children[0].removeEventListener('mouseover', addBrightness);
-    this.parentNode.classList.add('card__image--open');
-    
+    // this.parentNode.classList.add('card__image--open');
+
 }
 quickView.forEach(element => {
     element.addEventListener('click', openModal)
@@ -36,10 +61,11 @@ images.forEach(element => {
 
 
 //Realizar cosas cuando se clickea el icono de cerrar
-document.addEventListener('click',function(event){
+document.addEventListener('click', function(event) {
     const iconClose = event.target.closest('.card__close');
+    console.log(iconClose)
     if (iconClose !== null) {
-        iconClose.parentNode.classList.remove('card__image--open');
+        iconClose.parentNode.parentNode.removeChild(iconClose.parentNode);
         document.body.style.overflow = "auto";
     }
 });
@@ -49,8 +75,8 @@ document.addEventListener('click',function(event){
 //lazy loading
 
 function callback(entries, observer) {
-    entries.forEach(entry =>{
-        if (entry.isIntersecting){
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
             entry.target.src = entry.target.dataset.src;
             observer.unobserve(entry.target);
         }
@@ -75,16 +101,16 @@ const searchInput = document.querySelector('.nav__search');
 const cards = document.querySelectorAll('.card')
 
 function displayNoneAllCards() {
-    if (searchInput.value !== ''){ 
+    if (searchInput.value !== '') {
         cards.forEach(element => { // Al escribir en el input darle um display none a todos los elementos
-            element.style.display = "none"; 
+            element.style.display = "none";
         });
     }
 }
 searchInput.addEventListener('input', displayNoneAllCards)
 
 // funcion de cerrar el noresult close
-function closeReultsAlert(){
+function closeReultsAlert() {
     this.parentNode.style.display = "none"
 }
 // filtrar la busqueda
@@ -96,27 +122,27 @@ function filtrar() {
         if (element.className === "nav_element focus") {
             currentTypeNavlist = element.children[0].innerHTML.toLowerCase();
             let count = 0;
-            for (cardTitle of cardsTitles){
+            for (cardTitle of cardsTitles) {
                 let cardTitleLower = cardTitle.innerHTML.toLowerCase();
-                if(cardTitleLower.indexOf(searching) !== -1){
+                if (cardTitleLower.indexOf(searching) !== -1) {
                     let currentTypeCardImage = cardTitle.parentNode.children[0].dataset.type.toLowerCase();
                     if (currentTypeNavlist !== "all") {
                         if (currentTypeNavlist === currentTypeCardImage) {
                             cardTitle.parentNode.style.display = "flex";
                             count = count + 1;
                         }
-                    }else{
+                    } else {
                         cardTitle.parentNode.style.display = "flex";
                         count = count + 1;
                     }
                 }
-                if(count === 0){
+                if (count === 0) {
                     const NoResults = document.querySelector('.noResults');
                     const closeResults = document.querySelector('.noResults__close');
                     NoResults.style.display = "block";
                     // Cerrar el alert
                     closeResults.addEventListener('click', closeReultsAlert);
-                }else{
+                } else {
                     document.querySelector('.noResults').style.display = "none";
                 }
             }
@@ -138,34 +164,35 @@ function smoothScroll(target, duration) {
     var startPosition = window.pageYOffset;
     var distance = targetPosition - startPosition;
     var startTime = null;
-    
-    function animation(currentTime){
-        if(startTime === null) startTime = currentTime;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
         var timeElapsed = currentTime - startTime;
         var run = easeOutExpo(timeElapsed, startPosition, distance, duration);
         window.scroll(0, run);
-        if(timeElapsed < duration) requestAnimationFrame(animation);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
     }
-    
+
     function easeOutExpo(t, b, c, d) {
-        return c * ( -Math.pow( 2, -10 * t/d ) + 1 ) + b -16;        
+        return c * (-Math.pow(2, -10 * t / d) + 1) + b - 16;
     }
-    
+
     requestAnimationFrame(animation);
 }
 
-arrow.addEventListener('click', function(){
-    smoothScroll('nav', 1000)
-})
-// Al clickear un elemento li se debe agregar la clase
+arrow.addEventListener('click', function() {
+        smoothScroll('nav', 1000)
+    })
+    // Al clickear un elemento li se debe agregar la clase
 const navListLi = document.querySelectorAll('.nav_element');
+
 function addAndDeleteStyle() {
     for (let li of navListLi) {
-        if (li.className === 'nav_element focus'){
-            if(li !== this){
+        if (li.className === 'nav_element focus') {
+            if (li !== this) {
                 li.classList.remove('focus')
             }
-        }else if(li === this){
+        } else if (li === this) {
             li.classList.add('focus')
         }
     }
@@ -179,19 +206,20 @@ navListLi.forEach(element => {
 // Al clickear hacer que aparezca el tipo de imágenes
 function displayNoneAllCards2() {
     cards.forEach(element => { // Al escribir en el input darle um display none a todos los elementos
-        element.style.display = "none"; 
+        element.style.display = "none";
     });
 }
+
 function searchImagesByNav() {
     searchInput.value = "";
     displayNoneAllCards2();
-    for (image of images){
+    for (image of images) {
         const type = image.dataset.type.toLowerCase();
         const aElement = this.children[0].innerHTML.toLowerCase();
         if (aElement === 'all') {
             image.parentNode.style.display = "flex"
         } else
-        if(type.indexOf(aElement) !== -1){
+        if (type.indexOf(aElement) !== -1) {
             image.parentNode.style.display = "flex"
         }
     }
@@ -206,13 +234,14 @@ navListLi.forEach(element => {
 const goUpButton = document.querySelector('.goUp');
 const banner = document.querySelector('.banner');
 let vh100 = banner.clientHeight;
-function goUpButtonAppear(){
+
+function goUpButtonAppear() {
     vh100 = banner.clientHeight;
-    if (window.pageYOffset > vh100 + cards[0].clientHeight){
+    if (window.pageYOffset > vh100 + cards[0].clientHeight) {
         goUpButton.classList.add('goUp__popUp');
         goUpButton.classList.remove('goUp__popOff');
         goUpButton.style.opacity = "1";
-    }else{
+    } else {
         goUpButton.classList.remove('goUp__popUp');
         goUpButton.classList.add('goUp__popOff');
     }
@@ -220,6 +249,6 @@ function goUpButtonAppear(){
 window.addEventListener('scroll', goUpButtonAppear);
 window.addEventListener('load', goUpButtonAppear);
 
-goUpButton.addEventListener('click', function(){
+goUpButton.addEventListener('click', function() {
     smoothScroll('nav', 1000)
 })
