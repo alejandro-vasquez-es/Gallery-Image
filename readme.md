@@ -33,7 +33,7 @@
 
 ## About The Project
 
-<p>This is a webpage about a lot of things i have and i like, some plants that i use to take care for, some animals that i know or that are my pets and some landscapes of places that i had visited</p>
+<p>This is a webpage about a lot of things I have and I like, some plants that I use to take care for, some animals that I know or are my pets and some landscapes of places that I had visited</p>
 
 <img src="assets/img/png/screenshot.png">
 
