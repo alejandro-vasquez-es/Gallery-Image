@@ -33,7 +33,7 @@
 
 ## About The Project
 
-
+<p>This is a webpage about a lot of things i have and i like, some plants that i use to take care for, some animals that i know or that are my pets and some landscapes of places that i had visited</p>
 
 <img src="assets/img/png/screenshot.png">
 
@@ -47,6 +47,6 @@
 
 ## Contact
 
-Alejandro Vásquez - [@linkedin]https://www.linkedin.com/in/alejandro-v%C3%A1squez-4048a7218/) - alejandrovasquezesc@gmail.com
+Alejandro Vásquez - [@linkedin](https://www.linkedin.com/in/alejandro-v%C3%A1squez-4048a7218/) - alejandrovasquezesc@gmail.com
 
 Project Link: [https://github.com/alejandro-vasquez-es/Gallery-Image](https://github.com/alejandro-vasquez-es/Gallery-Image)
