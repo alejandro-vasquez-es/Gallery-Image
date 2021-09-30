@@ -202,10 +202,10 @@ function searchImagesByNav() {
         const type = image.dataset.type.toLowerCase();
         const aElement = this.children[0].innerHTML.toLowerCase();
         if (aElement === 'all') {
-            image.parentNode.style.display = "flex"
+            image.parentNode.style.display = "inline-flex"
         } else
         if (type.indexOf(aElement) !== -1) {
-            image.parentNode.style.display = "flex"
+            image.parentNode.style.display = "inline-flex"
         }
     }
 }
