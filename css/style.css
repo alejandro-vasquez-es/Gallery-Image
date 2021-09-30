@@ -211,7 +211,7 @@ body {
 
 .card-container {
     columns: 2;
-    column-gap: 1rem;
+    column-gap: 0.5rem;
     width: 90%;
     margin: 0 auto;
 }
@@ -219,6 +219,7 @@ body {
 @media screen and (min-width: 768px) {
     .card-container {
         columns: 3;
+        column-gap: 1rem;
     }
 }
 
@@ -341,6 +342,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     left: 0;
     width: 100vw;
     margin: 0;
@@ -353,8 +355,8 @@ body {
 
 .card__image--open img {
     animation: modalOpen 0.3s;
-    height: 75%;
     max-width: 90%;
+    min-height: 60%;
     transition: none;
 }
 

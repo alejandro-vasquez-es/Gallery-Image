@@ -33,23 +33,7 @@ function openModal() {
     `;
     modal.className = "card__image--open";
     this.parentNode.parentNode.appendChild(modal);
-    // const modal_container = document.createElement('div');
-    // modal_container.className = 'card card__image--open';
-    // const modal_image = document.createElement('img');
-    // modal_image.classList.add('card__image');
-    // modal_image.src = this.parentNode.children[0].src;
-    // modal_image.style.transition = 'filter 1s';
-    // modal_image.style.filter = 'brightness(1)';
-    // const modal_title = document.createElement('h3');
-    // modal_title.textContent = this.parentNode.children[2];
-    // const modal_close = document.createElement('i');
-    // modal_close.
-
-    //TODO creando nuevo modal
-    // this.parentNode.children[0].style.transition = "filter 1s";
-    // this.parentNode.children[0].style.filter = "brightness(1)";
     this.parentNode.children[0].removeEventListener('mouseover', addBrightness);
-    // this.parentNode.classList.add('card__image--open');
 
 }
 quickView.forEach(element => {
@@ -77,6 +61,7 @@ document.addEventListener('click', function(event) {
 function callback(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            entry.target.setAttribute('srcset', entry.target.dataset.srcset);
             entry.target.src = entry.target.dataset.src;
             observer.unobserve(entry.target);
         }
