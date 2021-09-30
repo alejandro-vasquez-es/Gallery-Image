@@ -356,7 +356,7 @@ body {
 .card__image--open img {
     animation: modalOpen 0.3s;
     max-width: 90%;
-    min-height: 60%;
+    max-height: 60%;
     transition: none;
 }
 
