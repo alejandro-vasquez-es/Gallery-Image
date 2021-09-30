@@ -27,7 +27,7 @@ function openModal() {
     document.body.style.overflow = "hidden"
     const modal = document.createElement('div');
     modal.innerHTML = `
-        <img src="${this.parentNode.children[0].src}" style="transition: filter 1s: filter; brightness(1)">
+        <img srcset="${this.parentNode.children[0].srcset}" src="${this.parentNode.children[0].src}" style="transition: filter 1s: filter; brightness(1)">
         <h3 class="card__title">${this.parentNode.children[2].textContent}</h3>
         <i class="fas fa-times card__close succes"></i>
     `;
